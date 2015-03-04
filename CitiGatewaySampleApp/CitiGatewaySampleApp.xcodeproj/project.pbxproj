@@ -25,6 +25,9 @@
 		9F461B7B1AA4FB3D00D514AD /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F461B7A1AA4FB3D00D514AD /* LoginViewController.m */; };
 		9F461B8E1AA501A300D514AD /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F461B8D1AA501A300D514AD /* CoreData.framework */; };
 		9F461B901AA501A800D514AD /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F461B8F1AA501A800D514AD /* libxml2.dylib */; };
+		9F7A52171AA779FF00EDF002 /* TransferFundsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7A52161AA779FF00EDF002 /* TransferFundsTableViewController.m */; };
+		9F7A521A1AA77C5600EDF002 /* TextEntryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7A52191AA77C5600EDF002 /* TextEntryTableViewCell.m */; };
+		9F7A521D1AA7809300EDF002 /* SingleButtonTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7A521C1AA7809300EDF002 /* SingleButtonTableViewCell.m */; };
 		9FA6C0011AA601120013D5A5 /* ContextManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA6C0001AA601120013D5A5 /* ContextManager.m */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +73,12 @@
 		9F461B7A1AA4FB3D00D514AD /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		9F461B8D1AA501A300D514AD /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		9F461B8F1AA501A800D514AD /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		9F7A52151AA779FF00EDF002 /* TransferFundsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransferFundsTableViewController.h; sourceTree = "<group>"; };
+		9F7A52161AA779FF00EDF002 /* TransferFundsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransferFundsTableViewController.m; sourceTree = "<group>"; };
+		9F7A52181AA77C5600EDF002 /* TextEntryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextEntryTableViewCell.h; sourceTree = "<group>"; };
+		9F7A52191AA77C5600EDF002 /* TextEntryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextEntryTableViewCell.m; sourceTree = "<group>"; };
+		9F7A521B1AA7809300EDF002 /* SingleButtonTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleButtonTableViewCell.h; sourceTree = "<group>"; };
+		9F7A521C1AA7809300EDF002 /* SingleButtonTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleButtonTableViewCell.m; sourceTree = "<group>"; };
 		9FA6BFFF1AA601120013D5A5 /* ContextManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContextManager.h; sourceTree = "<group>"; };
 		9FA6C0001AA601120013D5A5 /* ContextManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContextManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -170,6 +179,8 @@
 				9F461B741AA4C22A00D514AD /* TransactionsTableViewController.m */,
 				9F2879551AA75DDB00E49103 /* PayeesTableViewController.h */,
 				9F2879561AA75DDB00E49103 /* PayeesTableViewController.m */,
+				9F7A52151AA779FF00EDF002 /* TransferFundsTableViewController.h */,
+				9F7A52161AA779FF00EDF002 /* TransferFundsTableViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -183,6 +194,10 @@
 				9F461B771AA4C30200D514AD /* TransactionTableViewCell.m */,
 				9F2879581AA75FB400E49103 /* PayeeTableViewCell.h */,
 				9F2879591AA75FB400E49103 /* PayeeTableViewCell.m */,
+				9F7A52181AA77C5600EDF002 /* TextEntryTableViewCell.h */,
+				9F7A52191AA77C5600EDF002 /* TextEntryTableViewCell.m */,
+				9F7A521B1AA7809300EDF002 /* SingleButtonTableViewCell.h */,
+				9F7A521C1AA7809300EDF002 /* SingleButtonTableViewCell.m */,
 			);
 			name = TableViewCells;
 			sourceTree = "<group>";
@@ -300,12 +315,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F2879571AA75DDB00E49103 /* PayeesTableViewController.m in Sources */,
+				9F7A52171AA779FF00EDF002 /* TransferFundsTableViewController.m in Sources */,
 				9F461B7B1AA4FB3D00D514AD /* LoginViewController.m in Sources */,
 				9FA6C0011AA601120013D5A5 /* ContextManager.m in Sources */,
 				9F28795A1AA75FB400E49103 /* PayeeTableViewCell.m in Sources */,
 				9F461B6C1AA4B13E00D514AD /* AccountsTableViewController.m in Sources */,
 				9F461B721AA4BD7800D514AD /* BalancesTableViewController.m in Sources */,
+				9F7A521D1AA7809300EDF002 /* SingleButtonTableViewCell.m in Sources */,
 				9F461B751AA4C22A00D514AD /* TransactionsTableViewController.m in Sources */,
+				9F7A521A1AA77C5600EDF002 /* TextEntryTableViewCell.m in Sources */,
 				9F461B6F1AA4B55900D514AD /* AccountTableViewCell.m in Sources */,
 				9F461B781AA4C30200D514AD /* TransactionTableViewCell.m in Sources */,
 				9F461B471AA4A87500D514AD /* AppDelegate.m in Sources */,
