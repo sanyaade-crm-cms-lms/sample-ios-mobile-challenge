@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F2879531AA75D3800E49103 /* APResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9F2879511AA75D3800E49103 /* APResources.bundle */; };
+		9F2879541AA75D3800E49103 /* APSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F2879521AA75D3800E49103 /* APSDK.framework */; };
+		9F2879571AA75DDB00E49103 /* PayeesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2879561AA75DDB00E49103 /* PayeesTableViewController.m */; };
+		9F28795A1AA75FB400E49103 /* PayeeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2879591AA75FB400E49103 /* PayeeTableViewCell.m */; };
 		9F461B441AA4A87500D514AD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F461B431AA4A87500D514AD /* main.m */; };
 		9F461B471AA4A87500D514AD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F461B461AA4A87500D514AD /* AppDelegate.m */; };
 		9F461B501AA4A87500D514AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F461B4E1AA4A87500D514AD /* Main.storyboard */; };
@@ -21,8 +25,6 @@
 		9F461B7B1AA4FB3D00D514AD /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F461B7A1AA4FB3D00D514AD /* LoginViewController.m */; };
 		9F461B8E1AA501A300D514AD /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F461B8D1AA501A300D514AD /* CoreData.framework */; };
 		9F461B901AA501A800D514AD /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F461B8F1AA501A800D514AD /* libxml2.dylib */; };
-		9FA6BFFD1AA5FE140013D5A5 /* APResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9FA6BFFB1AA5FE140013D5A5 /* APResources.bundle */; };
-		9FA6BFFE1AA5FE140013D5A5 /* APSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FA6BFFC1AA5FE140013D5A5 /* APSDK.framework */; };
 		9FA6C0011AA601120013D5A5 /* ContextManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA6C0001AA601120013D5A5 /* ContextManager.m */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +39,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9F2879511AA75D3800E49103 /* APResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = APResources.bundle; sourceTree = "<group>"; };
+		9F2879521AA75D3800E49103 /* APSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = APSDK.framework; sourceTree = "<group>"; };
+		9F2879551AA75DDB00E49103 /* PayeesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayeesTableViewController.h; sourceTree = "<group>"; };
+		9F2879561AA75DDB00E49103 /* PayeesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PayeesTableViewController.m; sourceTree = "<group>"; };
+		9F2879581AA75FB400E49103 /* PayeeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayeeTableViewCell.h; sourceTree = "<group>"; };
+		9F2879591AA75FB400E49103 /* PayeeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PayeeTableViewCell.m; sourceTree = "<group>"; };
 		9F461B3E1AA4A87500D514AD /* CitiGatewaySampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CitiGatewaySampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F461B421AA4A87500D514AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F461B431AA4A87500D514AD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -62,8 +70,6 @@
 		9F461B7A1AA4FB3D00D514AD /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		9F461B8D1AA501A300D514AD /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		9F461B8F1AA501A800D514AD /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
-		9FA6BFFB1AA5FE140013D5A5 /* APResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = APResources.bundle; sourceTree = "<group>"; };
-		9FA6BFFC1AA5FE140013D5A5 /* APSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = APSDK.framework; sourceTree = "<group>"; };
 		9FA6BFFF1AA601120013D5A5 /* ContextManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContextManager.h; sourceTree = "<group>"; };
 		9FA6C0001AA601120013D5A5 /* ContextManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContextManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -73,7 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9FA6BFFE1AA5FE140013D5A5 /* APSDK.framework in Frameworks */,
+				9F2879541AA75D3800E49103 /* APSDK.framework in Frameworks */,
 				9F461B901AA501A800D514AD /* libxml2.dylib in Frameworks */,
 				9F461B8E1AA501A300D514AD /* CoreData.framework in Frameworks */,
 			);
@@ -162,6 +168,8 @@
 				9F461B711AA4BD7800D514AD /* BalancesTableViewController.m */,
 				9F461B731AA4C22A00D514AD /* TransactionsTableViewController.h */,
 				9F461B741AA4C22A00D514AD /* TransactionsTableViewController.m */,
+				9F2879551AA75DDB00E49103 /* PayeesTableViewController.h */,
+				9F2879561AA75DDB00E49103 /* PayeesTableViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -173,6 +181,8 @@
 				9F461B6E1AA4B55900D514AD /* AccountTableViewCell.m */,
 				9F461B761AA4C30200D514AD /* TransactionTableViewCell.h */,
 				9F461B771AA4C30200D514AD /* TransactionTableViewCell.m */,
+				9F2879581AA75FB400E49103 /* PayeeTableViewCell.h */,
+				9F2879591AA75FB400E49103 /* PayeeTableViewCell.m */,
 			);
 			name = TableViewCells;
 			sourceTree = "<group>";
@@ -180,8 +190,8 @@
 		9F461B951AA502D700D514AD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9FA6BFFB1AA5FE140013D5A5 /* APResources.bundle */,
-				9FA6BFFC1AA5FE140013D5A5 /* APSDK.framework */,
+				9F2879511AA75D3800E49103 /* APResources.bundle */,
+				9F2879521AA75D3800E49103 /* APSDK.framework */,
 				9F461B8D1AA501A300D514AD /* CoreData.framework */,
 				9F461B8F1AA501A800D514AD /* libxml2.dylib */,
 			);
@@ -270,7 +280,7 @@
 			files = (
 				9F461B501AA4A87500D514AD /* Main.storyboard in Resources */,
 				9F461B551AA4A87500D514AD /* LaunchScreen.xib in Resources */,
-				9FA6BFFD1AA5FE140013D5A5 /* APResources.bundle in Resources */,
+				9F2879531AA75D3800E49103 /* APResources.bundle in Resources */,
 				9F461B521AA4A87500D514AD /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,8 +299,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F2879571AA75DDB00E49103 /* PayeesTableViewController.m in Sources */,
 				9F461B7B1AA4FB3D00D514AD /* LoginViewController.m in Sources */,
 				9FA6C0011AA601120013D5A5 /* ContextManager.m in Sources */,
+				9F28795A1AA75FB400E49103 /* PayeeTableViewCell.m in Sources */,
 				9F461B6C1AA4B13E00D514AD /* AccountsTableViewController.m in Sources */,
 				9F461B721AA4BD7800D514AD /* BalancesTableViewController.m in Sources */,
 				9F461B751AA4C22A00D514AD /* TransactionsTableViewController.m in Sources */,

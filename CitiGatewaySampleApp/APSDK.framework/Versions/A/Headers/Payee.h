@@ -35,10 +35,52 @@
 @property (nonatomic, strong) NSString * id;
 
 /*!
+ @var addPayeeDetails
+ @abstract Generated model property: add_payee_details.
+ */
+@property (nonatomic, strong) NSString * addPayeeDetails;
+
+/*!
+ @var bankNameExt
+ @abstract Generated model property: bank_name_ext.
+ */
+@property (nonatomic, strong) NSString * bankNameExt;
+
+/*!
+ @var detailPrefix
+ @abstract Generated model property: detail_prefix.
+ */
+@property (nonatomic, strong) NSString * detailPrefix;
+
+/*!
+ @var lastPaymentAmt
+ @abstract Generated model property: last_payment_amt.
+ */
+@property (nonatomic, strong) NSNumber * lastPaymentAmt;
+
+/*!
+ @var payeeAccount
+ @abstract Generated model property: payee_account.
+ */
+@property (nonatomic, strong) NSString * payeeAccount;
+
+/*!
  @var payeeDescription
  @abstract Generated model property: payee_description.
  */
 @property (nonatomic, strong) NSString * payeeDescription;
+
+/*!
+ @var payeeListIdTwo
+ @abstract Generated model property: payee_list_id_two.
+ */
+@property (nonatomic, strong) NSNumber * payeeListIdTwo;
+
+/*!
+ @var payeeListIdType
+ @abstract Generated model property: payee_list_id_type.
+ */
+@property (nonatomic, strong) NSNumber * payeeListIdType;
 
 /*!
  @var payeeType
