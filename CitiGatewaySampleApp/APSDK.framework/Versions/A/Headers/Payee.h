@@ -38,7 +38,7 @@
  @var addPayeeDetails
  @abstract Generated model property: add_payee_details.
  */
-@property (nonatomic, strong) NSString * addPayeeDetails;
+@property (nonatomic, strong) NSDictionary * addPayeeDetails;
 
 /*!
  @var bankNameExt

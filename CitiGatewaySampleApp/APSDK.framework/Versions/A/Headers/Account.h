@@ -68,7 +68,7 @@
  @var displayAcctNo
  @abstract Generated model property: display_acct_no.
  */
-@property (nonatomic, strong) NSNumber * displayAcctNo;
+@property (nonatomic, strong) NSString * displayAcctNo;
 
 /*!
  @var isDestinationAccount
