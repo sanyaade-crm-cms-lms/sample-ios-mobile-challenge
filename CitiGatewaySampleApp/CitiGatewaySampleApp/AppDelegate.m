@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import <APSDK/CitiGateway.h>
+
+NSString * const kBaseURL = @"https://citimobilechallenge.anypresenceapp.com/retailbanking/v1";
 
 @interface AppDelegate ()
 
@@ -16,6 +19,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [CitiGateway setBaseURL:[NSURL URLWithString:kBaseURL]];
     return YES;
 }
 
