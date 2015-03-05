@@ -9,10 +9,16 @@
 #import "TransferFundsTableViewController.h"
 #import "TextEntryTableViewCell.h"
 #import "SingleButtonTableViewCell.h"
+#import <APSDK/CitiGateway.h>
+#import <APSDK/APObject+Remote.h>
+#import <APSDK/FundTransfer.h>
+#import <APSDK/FundTransfer+Remote.h>
+#import "ContextManager.h"
 
 @interface TransferFundsTableViewController ()
 
 @property (strong, nonatomic) NSArray *fieldsNames;
+@property (strong, nonatomic) NSArray *fieldsTypes;
 @property (strong, nonatomic) NSMutableArray *fieldsValues;
 @property (assign, nonatomic) BOOL isLoading;
 
@@ -23,25 +29,39 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.fieldsNames = @[@"id",
-                         @"sourceAccountId",
-                         @"amount",
-                         @"transactionDate",
-                         @"paymentType",
-                         @"currency",
+    self.fieldsNames = @[@"sourceAccountId",
                          @"destinationAccountId",
+                         @"destinationId",
+                         @"amount",
+                         @"currency",
+                         @"paymentType",
+                         @"transactionDate",
                          @"memo",
                          @"payeeDesc",
-                         @"payeeId",
                          @"payeeType"];
     
+    self.fieldsTypes = @[@"String",
+                         @"String",
+                         @"String",
+                         @"Float",
+                         @"String",
+                         @"String",
+                         @"String",
+                         @"String",
+                         @"String",
+                         @"Integer"];
+    
+    [self resetFieldValues];
+    
+    UITapGestureRecognizer *singleTapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(singleTappedView)];
+    [self.view addGestureRecognizer:singleTapGestureRecognizer];
+}
+
+- (void)resetFieldValues {
     self.fieldsValues = [NSMutableArray arrayWithCapacity:[self.fieldsNames count]];
     for (NSUInteger index = 0; index < [self.fieldsNames count]; index++) {
         [self.fieldsValues addObject:@""];
     }
-    
-    UITapGestureRecognizer *singleTapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(singleTappedView)];
-    [self.view addGestureRecognizer:singleTapGestureRecognizer];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -58,10 +78,30 @@
     self.isLoading = YES;
     NSArray *indexPaths = @[[NSIndexPath indexPathForItem:[sender tag] inSection:0]];
     [self.tableView reloadRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationAutomatic];
-    id object = nil;
+    FundTransfer *fundTransfer = [[FundTransfer alloc] init];
     for (NSUInteger index = 0; index < [self.fieldsNames count]; index++) {
-        [object setValue:self.fieldsValues[index] forKey:self.fieldsNames[index]];
+        id value = self.fieldsValues[index];
+        if ([self.fieldsTypes[index] isEqualToString:@"Integer"]) {
+            value = [NSNumber numberWithInteger:[value integerValue]];
+        }
+        if ([self.fieldsTypes[index] isEqualToString:@"Float"]) {
+            value = [NSNumber numberWithFloat:[value floatValue]];
+        }
+        [fundTransfer setValue:value forKey:self.fieldsNames[index]];
     }
+    TransferFundsTableViewController * __weak weakSelf = self;
+    [fundTransfer createAsyncWithContext:[[ContextManager sharedManager] loginContext] async:^(id object, NSError *error) {
+        weakSelf.isLoading = NO;
+        [weakSelf.tableView reloadRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationAutomatic];
+        if ([object referenceNumber]) {
+            [weakSelf resetFieldValues];
+            [weakSelf.tableView reloadData];
+            [[[UIAlertView alloc] initWithTitle:@"Fund Transfer Succesfull" message:[NSString stringWithFormat:@"Reference Number: %@", [object referenceNumber]] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+        }
+        else {
+            [[[UIAlertView alloc] initWithTitle:@"Fund Transfer Error" message:error.description delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+        }
+    }];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
