@@ -29,9 +29,14 @@
             <objects>
                 <navigationController id="BC0-sx-wnk" userLabel="Accounts Navigation Controller" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Accounts" id="8be-Na-vSq"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5Se-r2-ciE">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="5Se-r2-ciE">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.12941176469999999" green="0.58039215690000001" blue="0.90980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="yGC-m1-NQq" kind="relationship" relationship="rootViewController" id="RvA-fV-VSe"/>
@@ -46,9 +51,14 @@
             <objects>
                 <navigationController id="wbu-XR-LUD" userLabel="Payees Navigation Controller" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Payees" id="RuC-NP-xET"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="T6m-4M-dx4">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="T6m-4M-dx4">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.12941176469999999" green="0.58039215690000001" blue="0.90980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="QgZ-q0-2Oa" kind="relationship" relationship="rootViewController" id="lOs-WE-MVM"/>
@@ -172,7 +182,7 @@
             <objects>
                 <tableViewController title="Accounts" id="yGC-m1-NQq" customClass="AccountsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="134" sectionHeaderHeight="22" sectionFooterHeight="22" id="2fa-ze-5hQ">
-                        <rect key="frame" x="0.0" y="64" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -274,7 +284,7 @@
             <objects>
                 <tableViewController id="FbG-XN-0x2" customClass="BalancesTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="EUw-rq-kLm">
-                        <rect key="frame" x="0.0" y="64" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -317,7 +327,7 @@
             <objects>
                 <tableViewController id="nO2-Qv-Icl" customClass="TransactionsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="183" sectionHeaderHeight="22" sectionFooterHeight="22" id="Nay-Nx-5JR">
-                        <rect key="frame" x="0.0" y="64" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -433,30 +443,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="citi" translatesAutoresizingMaskIntoConstraints="NO" id="WWp-aO-hk5">
+                                <rect key="frame" x="78" y="119" width="164" height="141"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HK2-0g-qzl">
-                                <rect key="frame" x="74" y="71" width="172" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="74" y="260" width="172" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="john" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hed-1k-V4p">
-                                <rect key="frame" x="74" y="100" width="172" height="30"/>
+                                <rect key="frame" x="74" y="286" width="172" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet"/>
+                                <connections>
+                                    <outlet property="delegate" destination="mzM-Xp-kl5" id="mrM-bI-2as"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X5J-TG-OK2">
-                                <rect key="frame" x="74" y="147" width="172" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="74" y="333" width="172" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="password" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mq9-qA-8u9">
-                                <rect key="frame" x="74" y="176" width="172" height="30"/>
+                                <rect key="frame" x="74" y="359" width="172" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="mzM-Xp-kl5" id="jaH-EN-WIv"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X29-rF-Pjw">
-                                <rect key="frame" x="106" y="253" width="109" height="30"/>
+                                <rect key="frame" x="141" y="409" width="38" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" title="Login">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -465,7 +485,7 @@
                                 </connections>
                             </button>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="TSW-wB-Gwt">
-                                <rect key="frame" x="150" y="258" width="20" height="20"/>
+                                <rect key="frame" x="150" y="416" width="20" height="20"/>
                             </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -473,25 +493,28 @@
                             <constraint firstItem="hed-1k-V4p" firstAttribute="leading" secondItem="JKA-Hx-3zn" secondAttribute="leadingMargin" constant="58" id="4AH-d3-Hq3"/>
                             <constraint firstAttribute="trailingMargin" secondItem="hed-1k-V4p" secondAttribute="trailing" constant="58" id="4Th-35-r5o"/>
                             <constraint firstItem="hed-1k-V4p" firstAttribute="top" secondItem="HK2-0g-qzl" secondAttribute="bottom" constant="8" id="7g1-3c-Fbo"/>
+                            <constraint firstAttribute="centerX" secondItem="X29-rF-Pjw" secondAttribute="centerX" id="8Gh-qB-NL6"/>
                             <constraint firstItem="mq9-qA-8u9" firstAttribute="leading" secondItem="JKA-Hx-3zn" secondAttribute="leadingMargin" constant="58" id="9d4-5O-dx1"/>
                             <constraint firstItem="X5J-TG-OK2" firstAttribute="top" secondItem="hed-1k-V4p" secondAttribute="bottom" constant="17" id="E0U-yf-FDc"/>
-                            <constraint firstItem="X29-rF-Pjw" firstAttribute="top" secondItem="mq9-qA-8u9" secondAttribute="bottom" constant="47" id="JPI-NB-gAN"/>
+                            <constraint firstItem="X29-rF-Pjw" firstAttribute="top" secondItem="mq9-qA-8u9" secondAttribute="bottom" constant="20" id="JPI-NB-gAN"/>
                             <constraint firstAttribute="trailingMargin" secondItem="X5J-TG-OK2" secondAttribute="trailing" constant="58" id="Ly2-LA-vvB"/>
+                            <constraint firstItem="HK2-0g-qzl" firstAttribute="top" secondItem="WWp-aO-hk5" secondAttribute="bottom" id="Nj9-lc-M6A"/>
                             <constraint firstAttribute="trailingMargin" secondItem="mq9-qA-8u9" secondAttribute="trailing" constant="58" id="OKJ-WU-jLm"/>
+                            <constraint firstAttribute="centerY" secondItem="X29-rF-Pjw" secondAttribute="centerY" constant="-140" id="bwT-qz-9Do"/>
                             <constraint firstAttribute="trailingMargin" secondItem="HK2-0g-qzl" secondAttribute="trailing" constant="58" id="kUP-yV-MT9"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="X29-rF-Pjw" secondAttribute="trailing" constant="89" id="mL6-HH-csp"/>
+                            <constraint firstAttribute="centerX" secondItem="WWp-aO-hk5" secondAttribute="centerX" id="rrG-rf-9Zc"/>
                             <constraint firstItem="HK2-0g-qzl" firstAttribute="leading" secondItem="JKA-Hx-3zn" secondAttribute="leadingMargin" constant="58" id="tvx-Xw-gVH"/>
-                            <constraint firstItem="TSW-wB-Gwt" firstAttribute="top" secondItem="mq9-qA-8u9" secondAttribute="bottom" constant="52" id="uYu-iH-CUI"/>
-                            <constraint firstItem="HK2-0g-qzl" firstAttribute="top" secondItem="BOO-f3-PDO" secondAttribute="bottom" constant="51" id="urK-1G-1fZ"/>
+                            <constraint firstItem="TSW-wB-Gwt" firstAttribute="top" secondItem="mq9-qA-8u9" secondAttribute="bottom" constant="27" id="uYu-iH-CUI"/>
                             <constraint firstAttribute="centerX" secondItem="TSW-wB-Gwt" secondAttribute="centerX" id="vuC-Af-8PO"/>
                             <constraint firstItem="mq9-qA-8u9" firstAttribute="top" secondItem="X5J-TG-OK2" secondAttribute="bottom" constant="8" id="wPt-5A-Ecy"/>
-                            <constraint firstItem="X29-rF-Pjw" firstAttribute="leading" secondItem="JKA-Hx-3zn" secondAttribute="leadingMargin" constant="90" id="waj-zC-y9M"/>
                             <constraint firstItem="X5J-TG-OK2" firstAttribute="leading" secondItem="JKA-Hx-3zn" secondAttribute="leadingMargin" constant="58" id="zgf-yM-096"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="activityIndicatorView" destination="TSW-wB-Gwt" id="k23-iE-crO"/>
+                        <outlet property="keyboardConstraint" destination="bwT-qz-9Do" id="uXn-pK-7Wc"/>
                         <outlet property="loginButton" destination="X29-rF-Pjw" id="WiM-5u-du0"/>
+                        <outlet property="logoImageView" destination="WWp-aO-hk5" id="J4k-Yh-9Me"/>
                         <outlet property="passwordTextField" destination="mq9-qA-8u9" id="wgV-IR-L4h"/>
                         <outlet property="usernameTextField" destination="hed-1k-V4p" id="UV4-7w-JhN"/>
                         <segue destination="49e-Tb-3d3" kind="modal" identifier="TabBarControllerSegueID" id="SHP-CR-sc5"/>
@@ -506,9 +529,14 @@
             <objects>
                 <navigationController id="jNq-H2-3Ts" userLabel="Txf Funds Navigation Controller" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Txf Funds" id="Teh-Pd-cxY"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eX8-Yb-u8d">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="eX8-Yb-u8d">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.12941176469999999" green="0.58039215690000001" blue="0.90980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="Xcg-Vb-b7a" kind="relationship" relationship="rootViewController" id="Oiw-0e-mtV"/>
@@ -538,7 +566,7 @@
                                                 <constraint firstAttribute="width" constant="156" id="t9W-jF-JFB"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits"/>
+                                            <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet"/>
                                         </textField>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3cX-38-vbi">
                                             <rect key="frame" x="16" y="11" width="132" height="21"/>
@@ -601,6 +629,9 @@
             <point key="canvasLocation" x="833" y="43"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="citi" width="164" height="141"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
