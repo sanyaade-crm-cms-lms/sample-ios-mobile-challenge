@@ -32,6 +32,7 @@
     self.fieldsNames = @[@"sourceAccountId",
                          @"destinationAccountId",
                          @"destinationId",
+                         @"payeeId",
                          @"amount",
                          @"currency",
                          @"paymentType",
@@ -41,6 +42,7 @@
                          @"payeeType"];
     
     self.fieldsTypes = @[@"String",
+                         @"String",
                          @"String",
                          @"String",
                          @"Float",
@@ -74,34 +76,41 @@
 }
 
 - (void)submitButtonTouched:(id)sender {
-    [self.view endEditing:YES];
-    self.isLoading = YES;
-    NSArray *indexPaths = @[[NSIndexPath indexPathForItem:[sender tag] inSection:0]];
-    [self.tableView reloadRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationAutomatic];
-    FundTransfer *fundTransfer = [[FundTransfer alloc] init];
-    for (NSUInteger index = 0; index < [self.fieldsNames count]; index++) {
-        id value = self.fieldsValues[index];
-        if ([self.fieldsTypes[index] isEqualToString:@"Integer"]) {
-            value = [NSNumber numberWithInteger:[value integerValue]];
+    NSUInteger destinationAccountIdValueLength = [self.fieldsValues[1] length];
+    NSUInteger payeeIdValueLength = [self.fieldsValues[3] length];
+    if (destinationAccountIdValueLength || payeeIdValueLength) {
+        [self.view endEditing:YES];
+        self.isLoading = YES;
+        NSArray *indexPaths = @[[NSIndexPath indexPathForItem:[sender tag] inSection:0]];
+        [self.tableView reloadRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationAutomatic];
+        FundTransfer *fundTransfer = [[FundTransfer alloc] init];
+        for (NSUInteger index = 0; index < [self.fieldsNames count]; index++) {
+            id value = self.fieldsValues[index];
+            if ([self.fieldsTypes[index] isEqualToString:@"Integer"]) {
+                value = [NSNumber numberWithInteger:[value integerValue]];
+            }
+            if ([self.fieldsTypes[index] isEqualToString:@"Float"]) {
+                value = [NSNumber numberWithFloat:[value floatValue]];
+            }
+            [fundTransfer setValue:value forKey:self.fieldsNames[index]];
         }
-        if ([self.fieldsTypes[index] isEqualToString:@"Float"]) {
-            value = [NSNumber numberWithFloat:[value floatValue]];
-        }
-        [fundTransfer setValue:value forKey:self.fieldsNames[index]];
+        TransferFundsTableViewController * __weak weakSelf = self;
+        [fundTransfer createAsyncWithContext:[[ContextManager sharedManager] loginContext] async:^(id object, NSError *error) {
+            weakSelf.isLoading = NO;
+            [weakSelf.tableView reloadRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationAutomatic];
+            if ([object referenceNumber]) {
+                [weakSelf resetFieldValues];
+                [weakSelf.tableView reloadData];
+                [[[UIAlertView alloc] initWithTitle:@"Fund Transfer Succesfull" message:[NSString stringWithFormat:@"Reference Number: %@", [object referenceNumber]] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+            }
+            else {
+                [[[UIAlertView alloc] initWithTitle:@"Fund Transfer Error" message:error.description delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+            }
+        }];
     }
-    TransferFundsTableViewController * __weak weakSelf = self;
-    [fundTransfer createAsyncWithContext:[[ContextManager sharedManager] loginContext] async:^(id object, NSError *error) {
-        weakSelf.isLoading = NO;
-        [weakSelf.tableView reloadRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationAutomatic];
-        if ([object referenceNumber]) {
-            [weakSelf resetFieldValues];
-            [weakSelf.tableView reloadData];
-            [[[UIAlertView alloc] initWithTitle:@"Fund Transfer Succesfull" message:[NSString stringWithFormat:@"Reference Number: %@", [object referenceNumber]] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
-        }
-        else {
-            [[[UIAlertView alloc] initWithTitle:@"Fund Transfer Error" message:error.description delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
-        }
-    }];
+    else {
+        [[[UIAlertView alloc] initWithTitle:@"Fund Transfer Error" message:@"Fields 'payeeId' and 'destinationAccountId' must not be empty." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+    }
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {

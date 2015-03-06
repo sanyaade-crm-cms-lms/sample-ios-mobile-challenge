@@ -81,13 +81,17 @@
 - (IBAction)loginButtonTouched {
     self.loginButton.hidden = YES;
     [self.activityIndicatorView startAnimating];
+    NSDictionary *clientContext = @{@"clientID":[self.clientIdTextField.text copy]};
     LoginInfo *loginInfo = [[LoginInfo alloc] init];
-    loginInfo.username = self.usernameTextField.text;
-    loginInfo.password = self.passwordTextField.text;
+    loginInfo.username = [self.usernameTextField.text copy];
+    loginInfo.password = [self.passwordTextField.text copy];
     LoginViewController * __weak weakSelf = self;
-    [loginInfo createAsync:^(id object, NSError *error) {
+    [loginInfo createAsyncWithContext:clientContext async:^(id object, NSError *error) {
         if ([object token]) {
-            [[ContextManager sharedManager] setLoginContext:@{@"loginInfo":object}];
+            NSMutableDictionary *loginContext = [NSMutableDictionary dictionary];
+            [loginContext addEntriesFromDictionary:clientContext];
+            [loginContext addEntriesFromDictionary:@{@"loginInfo":object}];
+            [[ContextManager sharedManager] setLoginContext:loginContext];
             [weakSelf performSegueWithIdentifier:@"TabBarControllerSegueID" sender:self];
         }
         else {
