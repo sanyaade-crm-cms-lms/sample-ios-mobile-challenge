@@ -1,0 +1,553 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9F2879531AA75D3800E49103 /* APResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9F2879511AA75D3800E49103 /* APResources.bundle */; };
+		9F2879541AA75D3800E49103 /* APSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F2879521AA75D3800E49103 /* APSDK.framework */; };
+		9F2879571AA75DDB00E49103 /* PayeesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2879561AA75DDB00E49103 /* PayeesTableViewController.m */; };
+		9F28795A1AA75FB400E49103 /* PayeeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2879591AA75FB400E49103 /* PayeeTableViewCell.m */; };
+		9F461B441AA4A87500D514AD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F461B431AA4A87500D514AD /* main.m */; };
+		9F461B471AA4A87500D514AD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F461B461AA4A87500D514AD /* AppDelegate.m */; };
+		9F461B501AA4A87500D514AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F461B4E1AA4A87500D514AD /* Main.storyboard */; };
+		9F461B521AA4A87500D514AD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F461B511AA4A87500D514AD /* Images.xcassets */; };
+		9F461B551AA4A87500D514AD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F461B531AA4A87500D514AD /* LaunchScreen.xib */; };
+		9F461B611AA4A87500D514AD /* CitiGatewaySampleAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F461B601AA4A87500D514AD /* CitiGatewaySampleAppTests.m */; };
+		9F461B6C1AA4B13E00D514AD /* AccountsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F461B6B1AA4B13E00D514AD /* AccountsTableViewController.m */; };
+		9F461B6F1AA4B55900D514AD /* AccountTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F461B6E1AA4B55900D514AD /* AccountTableViewCell.m */; };
+		9F461B721AA4BD7800D514AD /* BalancesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F461B711AA4BD7800D514AD /* BalancesTableViewController.m */; };
+		9F461B751AA4C22A00D514AD /* TransactionsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F461B741AA4C22A00D514AD /* TransactionsTableViewController.m */; };
+		9F461B781AA4C30200D514AD /* TransactionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F461B771AA4C30200D514AD /* TransactionTableViewCell.m */; };
+		9F461B7B1AA4FB3D00D514AD /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F461B7A1AA4FB3D00D514AD /* LoginViewController.m */; };
+		9F461B8E1AA501A300D514AD /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F461B8D1AA501A300D514AD /* CoreData.framework */; };
+		9F461B901AA501A800D514AD /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F461B8F1AA501A800D514AD /* libxml2.dylib */; };
+		9F7A52171AA779FF00EDF002 /* TransferFundsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7A52161AA779FF00EDF002 /* TransferFundsTableViewController.m */; };
+		9F7A521A1AA77C5600EDF002 /* TextEntryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7A52191AA77C5600EDF002 /* TextEntryTableViewCell.m */; };
+		9F7A521D1AA7809300EDF002 /* SingleButtonTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7A521C1AA7809300EDF002 /* SingleButtonTableViewCell.m */; };
+		9FA6C0011AA601120013D5A5 /* ContextManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA6C0001AA601120013D5A5 /* ContextManager.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9F461B5B1AA4A87500D514AD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F461B361AA4A87400D514AD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9F461B3D1AA4A87400D514AD;
+			remoteInfo = CitiGatewaySampleApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9F2879511AA75D3800E49103 /* APResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = APResources.bundle; sourceTree = "<group>"; };
+		9F2879521AA75D3800E49103 /* APSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = APSDK.framework; sourceTree = "<group>"; };
+		9F2879551AA75DDB00E49103 /* PayeesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayeesTableViewController.h; sourceTree = "<group>"; };
+		9F2879561AA75DDB00E49103 /* PayeesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PayeesTableViewController.m; sourceTree = "<group>"; };
+		9F2879581AA75FB400E49103 /* PayeeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayeeTableViewCell.h; sourceTree = "<group>"; };
+		9F2879591AA75FB400E49103 /* PayeeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PayeeTableViewCell.m; sourceTree = "<group>"; };
+		9F461B3E1AA4A87500D514AD /* CitiGatewaySampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CitiGatewaySampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F461B421AA4A87500D514AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F461B431AA4A87500D514AD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9F461B451AA4A87500D514AD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		9F461B461AA4A87500D514AD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9F461B4F1AA4A87500D514AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9F461B511AA4A87500D514AD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		9F461B541AA4A87500D514AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		9F461B5A1AA4A87500D514AD /* CitiGatewaySampleAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CitiGatewaySampleAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F461B5F1AA4A87500D514AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F461B601AA4A87500D514AD /* CitiGatewaySampleAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CitiGatewaySampleAppTests.m; sourceTree = "<group>"; };
+		9F461B6A1AA4B13E00D514AD /* AccountsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountsTableViewController.h; sourceTree = "<group>"; };
+		9F461B6B1AA4B13E00D514AD /* AccountsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountsTableViewController.m; sourceTree = "<group>"; };
+		9F461B6D1AA4B55900D514AD /* AccountTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountTableViewCell.h; sourceTree = "<group>"; };
+		9F461B6E1AA4B55900D514AD /* AccountTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountTableViewCell.m; sourceTree = "<group>"; };
+		9F461B701AA4BD7800D514AD /* BalancesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BalancesTableViewController.h; sourceTree = "<group>"; };
+		9F461B711AA4BD7800D514AD /* BalancesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BalancesTableViewController.m; sourceTree = "<group>"; };
+		9F461B731AA4C22A00D514AD /* TransactionsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransactionsTableViewController.h; sourceTree = "<group>"; };
+		9F461B741AA4C22A00D514AD /* TransactionsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransactionsTableViewController.m; sourceTree = "<group>"; };
+		9F461B761AA4C30200D514AD /* TransactionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransactionTableViewCell.h; sourceTree = "<group>"; };
+		9F461B771AA4C30200D514AD /* TransactionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransactionTableViewCell.m; sourceTree = "<group>"; };
+		9F461B791AA4FB3D00D514AD /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		9F461B7A1AA4FB3D00D514AD /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		9F461B8D1AA501A300D514AD /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		9F461B8F1AA501A800D514AD /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		9F7A52151AA779FF00EDF002 /* TransferFundsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransferFundsTableViewController.h; sourceTree = "<group>"; };
+		9F7A52161AA779FF00EDF002 /* TransferFundsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransferFundsTableViewController.m; sourceTree = "<group>"; };
+		9F7A52181AA77C5600EDF002 /* TextEntryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextEntryTableViewCell.h; sourceTree = "<group>"; };
+		9F7A52191AA77C5600EDF002 /* TextEntryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextEntryTableViewCell.m; sourceTree = "<group>"; };
+		9F7A521B1AA7809300EDF002 /* SingleButtonTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleButtonTableViewCell.h; sourceTree = "<group>"; };
+		9F7A521C1AA7809300EDF002 /* SingleButtonTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleButtonTableViewCell.m; sourceTree = "<group>"; };
+		9FA6BFFF1AA601120013D5A5 /* ContextManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContextManager.h; sourceTree = "<group>"; };
+		9FA6C0001AA601120013D5A5 /* ContextManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContextManager.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9F461B3B1AA4A87400D514AD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F2879541AA75D3800E49103 /* APSDK.framework in Frameworks */,
+				9F461B901AA501A800D514AD /* libxml2.dylib in Frameworks */,
+				9F461B8E1AA501A300D514AD /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F461B571AA4A87500D514AD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9F461B351AA4A87400D514AD = {
+			isa = PBXGroup;
+			children = (
+				9F461B401AA4A87500D514AD /* CitiGatewaySampleApp */,
+				9F461B5D1AA4A87500D514AD /* CitiGatewaySampleAppTests */,
+				9F461B951AA502D700D514AD /* Frameworks */,
+				9F461B3F1AA4A87500D514AD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9F461B3F1AA4A87500D514AD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9F461B3E1AA4A87500D514AD /* CitiGatewaySampleApp.app */,
+				9F461B5A1AA4A87500D514AD /* CitiGatewaySampleAppTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9F461B401AA4A87500D514AD /* CitiGatewaySampleApp */ = {
+			isa = PBXGroup;
+			children = (
+				9F461B451AA4A87500D514AD /* AppDelegate.h */,
+				9F461B461AA4A87500D514AD /* AppDelegate.m */,
+				9FA6BFFF1AA601120013D5A5 /* ContextManager.h */,
+				9FA6C0001AA601120013D5A5 /* ContextManager.m */,
+				9F461B831AA4FFA400D514AD /* ViewControllers */,
+				9F461B841AA4FFCF00D514AD /* TableViewCells */,
+				9F461B4E1AA4A87500D514AD /* Main.storyboard */,
+				9F461B511AA4A87500D514AD /* Images.xcassets */,
+				9F461B531AA4A87500D514AD /* LaunchScreen.xib */,
+				9F461B411AA4A87500D514AD /* Supporting Files */,
+			);
+			path = CitiGatewaySampleApp;
+			sourceTree = "<group>";
+		};
+		9F461B411AA4A87500D514AD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9F461B421AA4A87500D514AD /* Info.plist */,
+				9F461B431AA4A87500D514AD /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9F461B5D1AA4A87500D514AD /* CitiGatewaySampleAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				9F461B601AA4A87500D514AD /* CitiGatewaySampleAppTests.m */,
+				9F461B5E1AA4A87500D514AD /* Supporting Files */,
+			);
+			path = CitiGatewaySampleAppTests;
+			sourceTree = "<group>";
+		};
+		9F461B5E1AA4A87500D514AD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9F461B5F1AA4A87500D514AD /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9F461B831AA4FFA400D514AD /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9F461B791AA4FB3D00D514AD /* LoginViewController.h */,
+				9F461B7A1AA4FB3D00D514AD /* LoginViewController.m */,
+				9F461B6A1AA4B13E00D514AD /* AccountsTableViewController.h */,
+				9F461B6B1AA4B13E00D514AD /* AccountsTableViewController.m */,
+				9F461B701AA4BD7800D514AD /* BalancesTableViewController.h */,
+				9F461B711AA4BD7800D514AD /* BalancesTableViewController.m */,
+				9F461B731AA4C22A00D514AD /* TransactionsTableViewController.h */,
+				9F461B741AA4C22A00D514AD /* TransactionsTableViewController.m */,
+				9F2879551AA75DDB00E49103 /* PayeesTableViewController.h */,
+				9F2879561AA75DDB00E49103 /* PayeesTableViewController.m */,
+				9F7A52151AA779FF00EDF002 /* TransferFundsTableViewController.h */,
+				9F7A52161AA779FF00EDF002 /* TransferFundsTableViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		9F461B841AA4FFCF00D514AD /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				9F461B6D1AA4B55900D514AD /* AccountTableViewCell.h */,
+				9F461B6E1AA4B55900D514AD /* AccountTableViewCell.m */,
+				9F461B761AA4C30200D514AD /* TransactionTableViewCell.h */,
+				9F461B771AA4C30200D514AD /* TransactionTableViewCell.m */,
+				9F2879581AA75FB400E49103 /* PayeeTableViewCell.h */,
+				9F2879591AA75FB400E49103 /* PayeeTableViewCell.m */,
+				9F7A52181AA77C5600EDF002 /* TextEntryTableViewCell.h */,
+				9F7A52191AA77C5600EDF002 /* TextEntryTableViewCell.m */,
+				9F7A521B1AA7809300EDF002 /* SingleButtonTableViewCell.h */,
+				9F7A521C1AA7809300EDF002 /* SingleButtonTableViewCell.m */,
+			);
+			name = TableViewCells;
+			sourceTree = "<group>";
+		};
+		9F461B951AA502D700D514AD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9F2879511AA75D3800E49103 /* APResources.bundle */,
+				9F2879521AA75D3800E49103 /* APSDK.framework */,
+				9F461B8D1AA501A300D514AD /* CoreData.framework */,
+				9F461B8F1AA501A800D514AD /* libxml2.dylib */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9F461B3D1AA4A87400D514AD /* CitiGatewaySampleApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F461B641AA4A87500D514AD /* Build configuration list for PBXNativeTarget "CitiGatewaySampleApp" */;
+			buildPhases = (
+				9F461B3A1AA4A87400D514AD /* Sources */,
+				9F461B3B1AA4A87400D514AD /* Frameworks */,
+				9F461B3C1AA4A87400D514AD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CitiGatewaySampleApp;
+			productName = CitiGatewaySampleApp;
+			productReference = 9F461B3E1AA4A87500D514AD /* CitiGatewaySampleApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9F461B591AA4A87500D514AD /* CitiGatewaySampleAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F461B671AA4A87500D514AD /* Build configuration list for PBXNativeTarget "CitiGatewaySampleAppTests" */;
+			buildPhases = (
+				9F461B561AA4A87500D514AD /* Sources */,
+				9F461B571AA4A87500D514AD /* Frameworks */,
+				9F461B581AA4A87500D514AD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9F461B5C1AA4A87500D514AD /* PBXTargetDependency */,
+			);
+			name = CitiGatewaySampleAppTests;
+			productName = CitiGatewaySampleAppTests;
+			productReference = 9F461B5A1AA4A87500D514AD /* CitiGatewaySampleAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9F461B361AA4A87400D514AD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = AnyPresence;
+				TargetAttributes = {
+					9F461B3D1AA4A87400D514AD = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					9F461B591AA4A87500D514AD = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 9F461B3D1AA4A87400D514AD;
+					};
+				};
+			};
+			buildConfigurationList = 9F461B391AA4A87400D514AD /* Build configuration list for PBXProject "CitiGatewaySampleApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9F461B351AA4A87400D514AD;
+			productRefGroup = 9F461B3F1AA4A87500D514AD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9F461B3D1AA4A87400D514AD /* CitiGatewaySampleApp */,
+				9F461B591AA4A87500D514AD /* CitiGatewaySampleAppTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9F461B3C1AA4A87400D514AD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F461B501AA4A87500D514AD /* Main.storyboard in Resources */,
+				9F461B551AA4A87500D514AD /* LaunchScreen.xib in Resources */,
+				9F2879531AA75D3800E49103 /* APResources.bundle in Resources */,
+				9F461B521AA4A87500D514AD /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F461B581AA4A87500D514AD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9F461B3A1AA4A87400D514AD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F2879571AA75DDB00E49103 /* PayeesTableViewController.m in Sources */,
+				9F7A52171AA779FF00EDF002 /* TransferFundsTableViewController.m in Sources */,
+				9F461B7B1AA4FB3D00D514AD /* LoginViewController.m in Sources */,
+				9FA6C0011AA601120013D5A5 /* ContextManager.m in Sources */,
+				9F28795A1AA75FB400E49103 /* PayeeTableViewCell.m in Sources */,
+				9F461B6C1AA4B13E00D514AD /* AccountsTableViewController.m in Sources */,
+				9F461B721AA4BD7800D514AD /* BalancesTableViewController.m in Sources */,
+				9F7A521D1AA7809300EDF002 /* SingleButtonTableViewCell.m in Sources */,
+				9F461B751AA4C22A00D514AD /* TransactionsTableViewController.m in Sources */,
+				9F7A521A1AA77C5600EDF002 /* TextEntryTableViewCell.m in Sources */,
+				9F461B6F1AA4B55900D514AD /* AccountTableViewCell.m in Sources */,
+				9F461B781AA4C30200D514AD /* TransactionTableViewCell.m in Sources */,
+				9F461B471AA4A87500D514AD /* AppDelegate.m in Sources */,
+				9F461B441AA4A87500D514AD /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F461B561AA4A87500D514AD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F461B611AA4A87500D514AD /* CitiGatewaySampleAppTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9F461B5C1AA4A87500D514AD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9F461B3D1AA4A87400D514AD /* CitiGatewaySampleApp */;
+			targetProxy = 9F461B5B1AA4A87500D514AD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9F461B4E1AA4A87500D514AD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9F461B4F1AA4A87500D514AD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9F461B531AA4A87500D514AD /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9F461B541AA4A87500D514AD /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9F461B621AA4A87500D514AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		9F461B631AA4A87500D514AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9F461B651AA4A87500D514AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = CitiGatewaySampleApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(OTHER_LDFLAGS)",
+					"-ObjC",
+					"-licucore",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		9F461B661AA4A87500D514AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = CitiGatewaySampleApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(OTHER_LDFLAGS)",
+					"-ObjC",
+					"-licucore",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		9F461B681AA4A87500D514AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = CitiGatewaySampleAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CitiGatewaySampleApp.app/CitiGatewaySampleApp";
+			};
+			name = Debug;
+		};
+		9F461B691AA4A87500D514AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = CitiGatewaySampleAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CitiGatewaySampleApp.app/CitiGatewaySampleApp";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9F461B391AA4A87400D514AD /* Build configuration list for PBXProject "CitiGatewaySampleApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F461B621AA4A87500D514AD /* Debug */,
+				9F461B631AA4A87500D514AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9F461B641AA4A87500D514AD /* Build configuration list for PBXNativeTarget "CitiGatewaySampleApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F461B651AA4A87500D514AD /* Debug */,
+				9F461B661AA4A87500D514AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9F461B671AA4A87500D514AD /* Build configuration list for PBXNativeTarget "CitiGatewaySampleAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F461B681AA4A87500D514AD /* Debug */,
+				9F461B691AA4A87500D514AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9F461B361AA4A87400D514AD /* Project object */;
+}
