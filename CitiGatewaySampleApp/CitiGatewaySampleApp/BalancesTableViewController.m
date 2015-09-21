@@ -7,10 +7,10 @@
 //
 
 #import "BalancesTableViewController.h"
-#import <APSDK/CitiGateway.h>
+#import <APSDK/RetailBanking.h>
 #import <APSDK/APObject+Remote.h>
-#import <APSDK/Balance.h>
-#import <APSDK/Balance+Remote.h>
+#import <APSDK/RetailBankingAccountBalance.h>
+#import <APSDK/RetailBankingAccountBalance+Remote.h>
 #import "ContextManager.h"
 
 @interface BalancesTableViewController ()
@@ -26,7 +26,7 @@
     [super viewDidLoad];
     self.isLoading = YES;
     BalancesTableViewController * __weak weakSelf = self;
-    [Balance allWithContext:[[ContextManager sharedManager] loginAndAccountContext] async:^(NSArray * objects, NSError * error) {
+    [RetailBankingAccountBalance allWithContext:[[ContextManager sharedManager] loginAndAccountContext] async:^(NSArray * objects, NSError * error) {
         weakSelf.isLoading = NO;
         weakSelf.balances = objects;
         [weakSelf.tableView reloadData];
@@ -57,7 +57,7 @@
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ActivityIndicatorCellID" forIndexPath:indexPath];
         return cell;
     }
-    Balance *balance = [self.balances objectAtIndex:[indexPath row]];
+    RetailBankingAccountBalance *balance = [self.balances objectAtIndex:[indexPath row]];
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"BalanceCellID" forIndexPath:indexPath];
     cell.textLabel.text = [NSString stringWithFormat:@"%@ : %@", balance.balanceType, balance.value];
     return cell;

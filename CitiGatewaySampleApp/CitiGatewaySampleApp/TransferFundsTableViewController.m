@@ -9,10 +9,10 @@
 #import "TransferFundsTableViewController.h"
 #import "TextEntryTableViewCell.h"
 #import "SingleButtonTableViewCell.h"
-#import <APSDK/CitiGateway.h>
+#import <APSDK/RetailBanking.h>
 #import <APSDK/APObject+Remote.h>
-#import <APSDK/FundTransfer.h>
-#import <APSDK/FundTransfer+Remote.h>
+#import <APSDK/RetailBankingAccountFundTransfer.h>
+#import <APSDK/RetailBankingAccountFundTransfer+Remote.h>
 #import "ContextManager.h"
 
 @interface TransferFundsTableViewController ()
@@ -47,11 +47,11 @@
                          @"String",
                          @"Float",
                          @"String",
+                         @"Integer",
                          @"String",
                          @"String",
                          @"String",
-                         @"String",
-                         @"Integer"];
+                         @"String"];
     
     [self resetFieldValues];
     
@@ -83,16 +83,24 @@
         self.isLoading = YES;
         NSArray *indexPaths = @[[NSIndexPath indexPathForItem:[sender tag] inSection:0]];
         [self.tableView reloadRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationAutomatic];
-        FundTransfer *fundTransfer = [[FundTransfer alloc] init];
+        RetailBankingAccountFundTransfer *fundTransfer = [[RetailBankingAccountFundTransfer alloc] init];
         for (NSUInteger index = 0; index < [self.fieldsNames count]; index++) {
             id value = self.fieldsValues[index];
-            if ([self.fieldsTypes[index] isEqualToString:@"Integer"]) {
-                value = [NSNumber numberWithInteger:[value integerValue]];
+            if(index == 0) {
+                NSMutableDictionary *context = [NSMutableDictionary dictionary];
+                [context addEntriesFromDictionary:[[ContextManager sharedManager] loginContext]];
+                [context setObject:value forKey:@"params.id"];
+                [[ContextManager sharedManager] setLoginContext:context];
             }
-            if ([self.fieldsTypes[index] isEqualToString:@"Float"]) {
-                value = [NSNumber numberWithFloat:[value floatValue]];
+            else {
+                if ([self.fieldsTypes[index] isEqualToString:@"Integer"]) {
+                    value = [NSNumber numberWithInteger:[value integerValue]];
+                }
+                if ([self.fieldsTypes[index] isEqualToString:@"Float"]) {
+                    value = [NSNumber numberWithFloat:[value floatValue]];
+                }
+                [fundTransfer setValue:value forKey:self.fieldsNames[index]];
             }
-            [fundTransfer setValue:value forKey:self.fieldsNames[index]];
         }
         TransferFundsTableViewController * __weak weakSelf = self;
         [fundTransfer createAsyncWithContext:[[ContextManager sharedManager] loginContext] async:^(id object, NSError *error) {

@@ -7,10 +7,10 @@
 //
 
 #import "LoginViewController.h"
-#import <APSDK/CitiGateway.h>
+#import <APSDK/RetailBanking.h>
 #import <APSDK/APObject+Remote.h>
-#import <APSDK/LoginInfo.h>
-#import <APSDK/LoginInfo+Remote.h>
+#import <APSDK/RetailBankingLogin.h>
+#import <APSDK/RetailBankingLogin+Remote.h>
 #import "ContextManager.h"
 
 #define kLoginButtonToKeyboardOffset 25.0
@@ -81,15 +81,16 @@
 - (IBAction)loginButtonTouched {
     self.loginButton.hidden = YES;
     [self.activityIndicatorView startAnimating];
-    NSDictionary *clientContext = @{@"clientID":[self.clientIdTextField.text copy]};
-    LoginInfo *loginInfo = [[LoginInfo alloc] init];
+    NSMutableDictionary *loginContext = [NSMutableDictionary
+                                          dictionaryWithDictionary:@{
+                                            @"session.client_id": [self.clientIdTextField.text copy] }];
+    RetailBankingLogin *loginInfo = [[RetailBankingLogin alloc] init];
     loginInfo.username = [self.usernameTextField.text copy];
     loginInfo.password = [self.passwordTextField.text copy];
     LoginViewController * __weak weakSelf = self;
-    [loginInfo createAsyncWithContext:clientContext async:^(id object, NSError *error) {
+    [loginInfo createAsyncWithContext:loginContext async:^(id object, NSError *error) {
         if ([object token]) {
-            NSMutableDictionary *loginContext = [NSMutableDictionary dictionary];
-            [loginContext addEntriesFromDictionary:clientContext];
+            [loginContext setObject:[object token] forKey:@"session.retail_banking_token"];
             [loginContext addEntriesFromDictionary:@{@"loginInfo":object}];
             [[ContextManager sharedManager] setLoginContext:loginContext];
             [weakSelf performSegueWithIdentifier:@"TabBarControllerSegueID" sender:self];

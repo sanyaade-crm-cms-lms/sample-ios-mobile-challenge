@@ -8,10 +8,10 @@
 
 #import "PayeesTableViewController.h"
 #import "PayeeTableViewCell.h"
-#import <APSDK/CitiGateway.h>
+#import <APSDK/RetailBanking.h>
 #import <APSDK/APObject+Remote.h>
-#import <APSDK/Payee.h>
-#import <APSDK/Payee+Remote.h>
+#import <APSDK/RetailBankingPayee.h>
+#import <APSDK/RetailBankingPayee+Remote.h>
 #import "ContextManager.h"
 
 @interface PayeesTableViewController ()
@@ -27,7 +27,7 @@
     [super viewDidLoad];
     self.isLoading = YES;
     PayeesTableViewController * __weak weakSelf = self;
-    [Payee allWithContext:[[ContextManager sharedManager] loginContext] async:^(NSArray * objects, NSError * error) {
+    [RetailBankingPayee allWithContext:[[ContextManager sharedManager] loginContext] async:^(NSArray * objects, NSError * error) {
         weakSelf.isLoading = NO;
         weakSelf.payees = objects;
         [weakSelf.tableView reloadData];
@@ -57,7 +57,7 @@
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ActivityIndicatorCellID" forIndexPath:indexPath];
         return cell;
     }
-    Payee *payee = [self.payees objectAtIndex:[indexPath row]];
+    RetailBankingPayee *payee = [self.payees objectAtIndex:[indexPath row]];
     PayeeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PayeeCellID" forIndexPath:indexPath];
     cell.idLabel.text = [NSString stringWithFormat:@"Payee ID: %@", payee.id];
     cell.descriptionLabel.text = payee.payeeDescription;

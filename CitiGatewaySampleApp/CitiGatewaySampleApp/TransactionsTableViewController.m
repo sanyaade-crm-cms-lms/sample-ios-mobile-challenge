@@ -8,10 +8,10 @@
 
 #import "TransactionsTableViewController.h"
 #import "TransactionTableViewCell.h"
-#import <APSDK/CitiGateway.h>
+#import <APSDK/RetailBanking.h>
 #import <APSDK/APObject+Remote.h>
-#import <APSDK/Transaction.h>
-#import <APSDK/Transaction+Remote.h>
+#import <APSDK/RetailBankingAccountTransaction.h>
+#import <APSDK/RetailBankingAccountTransaction+Remote.h>
 #import "ContextManager.h"
 
 @interface TransactionsTableViewController ()
@@ -27,7 +27,7 @@
     [super viewDidLoad];
     self.isLoading = YES;
     TransactionsTableViewController * __weak weakSelf = self;
-    [Transaction allWithContext:[[ContextManager sharedManager] loginAndAccountContext] async:^(NSArray * objects, NSError * error) {
+    [RetailBankingAccountTransaction allWithContext:[[ContextManager sharedManager] loginAndAccountContext] async:^(NSArray * objects, NSError * error) {
         weakSelf.isLoading = NO;
         weakSelf.transactions = objects;
         [weakSelf.tableView reloadData];
@@ -58,13 +58,13 @@
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ActivityIndicatorCellID" forIndexPath:indexPath];
         return cell;
     }
-    Transaction *transaction = [self.transactions objectAtIndex:[indexPath row]];
+    RetailBankingAccountTransaction *transaction = [self.transactions objectAtIndex:[indexPath row]];
     TransactionTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TransactionCellID" forIndexPath:indexPath];
     cell.idLabel.text = [NSString stringWithFormat:@"Transaction ID: %@", transaction.id];
     cell.amoutLabel.text = [NSString stringWithFormat:@"Amount: %@", transaction.formattedAmount];
     cell.pendingDateLabel.text = [NSString stringWithFormat:@"Pending Date: %@", transaction.pendingDate];
     cell.typeLabel.text = [NSString stringWithFormat:@"Transaction Type: %@", transaction.transactionType];
-    cell.descriptionLabel.text = [NSString stringWithFormat:@"Description: %@", transaction.descrip];
+    cell.descriptionLabel.text = [NSString stringWithFormat:@"Description: %@", transaction.transactionDescription];
     cell.activityLabel.text = [NSString stringWithFormat:@"Activity: %@", transaction.activity];
     return cell;
 }

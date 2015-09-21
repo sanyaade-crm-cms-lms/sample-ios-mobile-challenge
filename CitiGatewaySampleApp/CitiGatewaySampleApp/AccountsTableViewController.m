@@ -8,10 +8,10 @@
 
 #import "AccountsTableViewController.h"
 #import "AccountTableViewCell.h"
-#import <APSDK/CitiGateway.h>
+#import <APSDK/RetailBanking.h>
 #import <APSDK/APObject+Remote.h>
-#import <APSDK/Account.h>
-#import <APSDK/Account+Remote.h>
+#import <APSDK/RetailBankingAccount.h>
+#import <APSDK/RetailBankingAccount+Remote.h>
 #import "ContextManager.h"
 
 @interface AccountsTableViewController ()
@@ -27,7 +27,7 @@
     [super viewDidLoad];
     self.isLoading = YES;
     AccountsTableViewController * __weak weakSelf = self;
-    [Account allWithContext:[[ContextManager sharedManager] loginContext] async:^(NSArray * objects, NSError * error) {
+    [RetailBankingAccount allWithContext:[[ContextManager sharedManager] loginContext] async:^(NSArray * objects, NSError * error) {
         weakSelf.isLoading = NO;
         weakSelf.accounts = objects;
         [weakSelf.tableView reloadData];
@@ -43,10 +43,10 @@
 }
 
 - (void)setContextForAccountAtIndex:(NSInteger)index {
-    Account *account = [self.accounts objectAtIndex:index];
+    RetailBankingAccount *account = [self.accounts objectAtIndex:index];
     NSMutableDictionary *context = [NSMutableDictionary dictionary];
     [context addEntriesFromDictionary:[[ContextManager sharedManager] loginContext]];
-    [context addEntriesFromDictionary:@{@"account":account}];
+    [context addEntriesFromDictionary:@{@"params":account}];
     [[ContextManager sharedManager] setLoginAndAccountContext:context];
 }
 
@@ -76,7 +76,7 @@
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ActivityIndicatorCellID" forIndexPath:indexPath];
         return cell;
     }
-    Account *account = [self.accounts objectAtIndex:[indexPath row]];
+    RetailBankingAccount *account = [self.accounts objectAtIndex:[indexPath row]];
     AccountTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"AccountCellID" forIndexPath:indexPath];
     cell.idLabel.text = [NSString stringWithFormat:@"Account ID: %@", account.id];
     cell.descriptionLabel.text = account.productDescription;
